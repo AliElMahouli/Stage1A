@@ -1,14 +1,6 @@
-import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-from sklearn.datasets import make_regression
-from sklearn.neighbors import KNeighborsClassifier
-from Librairie_version16062020 import*
 import argparse
-import functools
-import random
-import scipy.stats
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--fich', metavar='L', type=str, nargs='+',
@@ -27,31 +19,31 @@ fich=tuple(args.fich)[0]
 
 se=tuple(args.sep)[0]
 
+#Lecture du fichier csv selon le séparateur
 if (se=="space"):
-	data = pd.read_csv('/home/ali/stage/public/clustering/datasets/'+fich,sep ='\s+')
+	data = pd.read_csv('/home/ali/stage/public/regression_multiple/datasets/'+fich,sep ='\s+')
 elif (se=="tab"):
-	data = pd.read_csv('/home/ali/stage/public/clustering/datasets/'+fich,sep ='\t')
+	data = pd.read_csv('/home/ali/stage/public/regression_multiple/datasets/'+fich,sep ='\t')
 elif (se=="comma"):
-	data = pd.read_csv('/home/ali/stage/public/clustering/datasets/'+fich,sep =',')
+	data = pd.read_csv('/home/ali/stage/public/regression_multiple/datasets/'+fich,sep =',')
 elif (se=="semicolon"):
-	data = pd.read_csv('/home/ali/stage/public/clustering/datasets/'+fich,sep =';')
+	data = pd.read_csv('/home/ali/stage/public/regression_multiple/datasets/'+fich,sep =';')
 else:
-	data = pd.read_csv('/home/ali/stage/public/clustering/datasets/'+fich,sep =':')
+	data = pd.read_csv('/home/ali/stage/public/regression_multiple/datasets/'+fich,sep =':')
 
+
+#Supprimer les colonnes à ignorer 
 if (args.att is not None):
     for att in tuple(args.att):
         data = data.drop([att[:-1]],axis=1)
 
+#Récupération du nombre de colonnes restantes
 print(len(data.columns))
+
+#Récupération de la méthode de gestion de valeurs manquantes
 print(tuple(args.na)[0])
 
+#Récupération des noms des colonnes restantes
 for col in data.columns: 
     print(col)
-
-if(tuple(args.na)[0]=="remplacer"):
-    for col in data.columns: 
-        data[col]=data[col].fillna(value=data[col].mean())
-else:
-    data = data.dropna(axis=0)
-
 

@@ -30,15 +30,15 @@ fich=tuple(args.fich)[0]
 se=tuple(args.sep)[0]
 
 if (se=="space"):
-	data = pd.read_csv('/home/ali/stage/public/clustering/datasets/'+fich,sep ='\s+')
+	data = pd.read_csv('/home/ali/stage/public/regression_multiple/datasets/'+fich,sep ='\s+')
 elif (se=="tab"):
-	data = pd.read_csv('/home/ali/stage/public/clustering/datasets/'+fich,sep ='\t')
+	data = pd.read_csv('/home/ali/stage/public/regression_multiple/datasets/'+fich,sep ='\t')
 elif (se=="comma"):
-	data = pd.read_csv('/home/ali/stage/public/clustering/datasets/'+fich,sep =',')
+	data = pd.read_csv('/home/ali/stage/public/regression_multiple/datasets/'+fich,sep =',')
 elif (se=="semicolon"):
-	data = pd.read_csv('/home/ali/stage/public/clustering/datasets/'+fich,sep =';')
+	data = pd.read_csv('/home/ali/stage/public/regression_multiple/datasets/'+fich,sep =';')
 else:
-	data = pd.read_csv('/home/ali/stage/public/clustering/datasets/'+fich,sep =':')
+	data = pd.read_csv('/home/ali/stage/public/regression_multiple/datasets/'+fich,sep =':')
 
 val = []
 
@@ -96,11 +96,6 @@ theta = np.random.randn(int(numb_att), 1)
 
 def model(X, theta):
     return X.dot(theta)
-
-def cost_function(X, y, theta):
-    m = len(y)
-    return 1/(2*m) * np.sum((model(X, theta) - y)**2)
-
 
 
 t1= np.transpose(M).dot(M)
