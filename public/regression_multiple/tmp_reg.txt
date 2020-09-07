@@ -1,0 +1,6 @@
+5
+Index
+One
+Weight
+Age
+Blood_fat_content

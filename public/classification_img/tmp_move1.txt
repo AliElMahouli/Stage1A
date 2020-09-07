@@ -1,0 +1,4 @@
+Archive:  datasets/line.zip
+  inflating: train/classe0/kisspng-plus-and-minus-signs-meno-subtraction-mathematics-horizontal-line-5ad80c50ae3822.9895855715241083687136.jpg  
+  inflating: train/classe0/kisspng-shape-line-point-google-cast-computer-icons-kazak-5b523817846886.8666287415321149675424.jpg  
+  inflating: train/classe0/shape-line-circle-square-geometry-png-favpng-HQ3PDnGe1NhMpxjiKjwkSkZzm.jpg  

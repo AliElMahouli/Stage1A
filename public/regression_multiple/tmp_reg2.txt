@@ -1,0 +1,5 @@
+3
+supprimer
+Weight
+Age
+Blood_fat_content

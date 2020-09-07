@@ -1,0 +1,7 @@
+Archive:  datasets/square.zip
+  inflating: train/classe1/10304-black-small-square.png  
+  inflating: train/classe1/7199f67a7838bc5ea92f866b00c29f8fbf946614_large.jpg  
+  inflating: train/classe1/board-game-square-area-angle-pattern-square-shape-s-png-clip-art.png  
+  inflating: train/classe1/26-261934_red-square-shape-clipart-carmine-hd-png-download.png.jpeg  
+  inflating: train/classe1/unnamed.png  
+  inflating: train/classe1/square-shape-blue-square-s-png-clip-art.png  
